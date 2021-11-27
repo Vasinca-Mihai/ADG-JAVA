@@ -1,0 +1,13 @@
+package Lecture_5_generics.Genric_Iterator;
+
+import java.sql.SQLOutput;
+
+public class Main {
+    public static void main(String[] args) {
+        Integer[] arr = new Integer[] {1,2,3,4};
+        IArrayIterator<Integer> it = new ArrayIterator<>(arr);
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+    }
+}
