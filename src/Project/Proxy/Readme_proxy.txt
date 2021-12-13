@@ -1,5 +1,4 @@
-Un server precum cel al S.P.C.L.E.P. ce contine date despre persoane fizice.
-Acest server este apleat de ori de cate ori alte sisteme (cum ar fi cel al politiei, unei judecatorii, primariei locale, etc.) vor sa aceseze acele date.
+Un server precum cel al S.P.C.L.E.P. ce contine date despre persoane fizice este apleat de ori de cate ori alte sisteme (cum ar fi cel al politiei, unei judecatorii, primariei locale, etc.) vor sa aceseze acele date.
 Aceste accesari sunt foarte vrecvente si prin urmare serverul este ocupat aproape constant.
 Ca sa minimizeze numarul de verificari ce trebuie rulate de serverul S.P.C.L.E.P., un proxy exista pe fiecare calculator ce poate apela serverul.
 Acest proxy verifica validitatea detlor introduse, apoi trimite acel request catre serverul S.P.C.L.E.P..
