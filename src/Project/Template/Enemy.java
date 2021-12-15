@@ -9,12 +9,11 @@ public class Enemy {
         getInPosition();
         attackTarget();
         returnToInitialPosition();
-        //mainBehavior(chance);
     }
     protected void lookForTarget( int comparator){ //in mod normal ar returna un obiect cum ar fi alt enemy sau un player sau ceva similar
         boolean hasFound = false;
         while (!hasFound){
-            if(getRnadomNumber()>comparator){wanderAround();}
+            if(getRandomNumber()>comparator){wanderAround();}
             else{
                 System.out.println("Target acquired.");
                 hasFound = true;
@@ -36,6 +35,6 @@ public class Enemy {
     protected void returnToInitialPosition(){
         System.out.println("It goes back to where it came from.");
     }
-    protected int getRnadomNumber(){return new Random().nextInt(100);}
+    protected int getRandomNumber(){return new Random().nextInt(100);}
 
 }

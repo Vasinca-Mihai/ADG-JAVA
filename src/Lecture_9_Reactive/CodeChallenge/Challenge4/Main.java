@@ -34,7 +34,6 @@ public class Main {
     public static Flux<User> asyncCapitalizeMany(Flux<User> f){
         return f.flatMap(u->asyncCapitalizeUser(u).flux());
     }
-
     static Mono<User> asyncCapitalizeUser(User u) {
         return Mono.just(new User(u.getFirstName().toUpperCase(), u.getLastName().toUpperCase(), u.getUsername().toUpperCase()));
     }

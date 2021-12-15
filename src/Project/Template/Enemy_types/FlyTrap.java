@@ -7,7 +7,6 @@ public class FlyTrap extends Enemy {//ma refer la venus fly trap (plante "carniv
     public void mainBehavior( int chance){
         lookForTarget(chance);
         attackTarget();
-        //mainBehavior(chance);
     }
     @Override
     protected void attackTarget(){//daca decid sa adaug o vatiatie a acestei fly trap pot, spre exemplu, sa modific numai felul in care musca suprascriind metoda bite
