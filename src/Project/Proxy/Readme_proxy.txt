@@ -6,3 +6,4 @@ Acest proxy verifica validitatea detlor introduse, apoi trimite acel request cat
 In exemplul acesta am luat in considerare numai numele, adresa si CNP-ul, dar o baza de date adevarata ar contine si
 date despre alte documente (certificat de nastere, buletin, pasaport, permis de condus, permis de pescuit, etc), stare civila, etc.
 Am implementat felul in care un astfel de Proxy ar putea verifica validitatea unui CNP introdus apoi ar apela baza de date.
+Am putea adouga inca o baza de date in care stocam doar anumite persoane (alese duap un anumit criteriu) si proxy-ul sa apeleze baza de date corecta bazandu-se pe acel criteriu

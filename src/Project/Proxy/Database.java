@@ -3,15 +3,7 @@ package Project.Proxy;
 import java.util.HashMap;
 
 public class Database {
-    private static Database DatabaseInstance;
     private HashMap<String, Person> DB = new HashMap<>();
-
-    public static Database getInstance(){
-        if (DatabaseInstance == null){
-            DatabaseInstance = new Database();
-        }
-        return DatabaseInstance;
-    }
 
     public void addEntry(Person p){
         DB.put(p.getCNP(),p);

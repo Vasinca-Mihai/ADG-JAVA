@@ -1,0 +1,43 @@
+package Lecture_3_Design_patterns.DrinkingTime;
+
+public class Person implements IPerson{
+    private String name;
+
+    private Person(Builder builder) {
+        this.name = builder.name;
+    }
+    public void walk() {
+        System.out.println(name + " walks!");
+    }
+    public void drink() {
+        try {
+            Thread.sleep(100);
+        } catch (Exception e) {
+        }
+        System.out.println(name + " drinks!");
+    }
+    public String getName() {
+        return name;
+    }
+
+    static class Builder {
+        private String name;
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public IPerson build() {
+            Person person = new Person(this);
+            IPerson personProxy = (IPerson) java.lang.reflect.Proxy.newProxyInstance(
+                    PersonInvocationHandler.class.getClassLoader(),
+                    new Class[]{IPerson.class},
+                    new PersonInvocationHandler(person));
+
+            return personProxy;
+        }
+    }
+}
+
+
